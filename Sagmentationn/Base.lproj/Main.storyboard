@@ -1,24 +1,80 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Sagmentationn" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qPa-mo-m9g">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="meA-ic-2Sv">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                        <subviews>
+                                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="M3b-PN-3C2">
+                                                <rect key="frame" x="8" y="52" width="398" height="31"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="30" id="g5w-RD-Lgk"/>
+                                                </constraints>
+                                                <segments>
+                                                    <segment title="First"/>
+                                                    <segment title="Second"/>
+                                                </segments>
+                                            </segmentedControl>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="M3b-PN-3C2" secondAttribute="trailing" constant="8" id="awc-5Q-XyK"/>
+                                            <constraint firstItem="M3b-PN-3C2" firstAttribute="leading" secondItem="meA-ic-2Sv" secondAttribute="leading" constant="8" id="cey-3D-wkr"/>
+                                            <constraint firstItem="M3b-PN-3C2" firstAttribute="top" secondItem="meA-ic-2Sv" secondAttribute="top" constant="52" id="rAr-Ao-fcS"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="meA-ic-2Sv" firstAttribute="trailing" secondItem="Jfi-A6-jlX" secondAttribute="trailing" constant="414" id="DSO-Ls-6ts"/>
+                                    <constraint firstItem="meA-ic-2Sv" firstAttribute="bottom" secondItem="7We-L5-9cR" secondAttribute="bottom" id="EIr-GA-zST"/>
+                                    <constraint firstItem="meA-ic-2Sv" firstAttribute="trailing" secondItem="7We-L5-9cR" secondAttribute="trailing" id="HCj-ci-hiA"/>
+                                    <constraint firstItem="meA-ic-2Sv" firstAttribute="height" secondItem="7We-L5-9cR" secondAttribute="height" id="K50-tv-M9i"/>
+                                    <constraint firstItem="meA-ic-2Sv" firstAttribute="top" secondItem="7We-L5-9cR" secondAttribute="top" id="OlD-sO-uT4"/>
+                                    <constraint firstItem="meA-ic-2Sv" firstAttribute="bottom" secondItem="Jfi-A6-jlX" secondAttribute="bottom" constant="896" id="R8k-MZ-Bo4"/>
+                                    <constraint firstItem="meA-ic-2Sv" firstAttribute="top" secondItem="Jfi-A6-jlX" secondAttribute="top" id="TBB-vh-RGA"/>
+                                    <constraint firstItem="meA-ic-2Sv" firstAttribute="leading" secondItem="7We-L5-9cR" secondAttribute="leading" id="cVv-H8-f4v"/>
+                                    <constraint firstItem="meA-ic-2Sv" firstAttribute="leading" secondItem="Jfi-A6-jlX" secondAttribute="leading" id="rGX-g7-OCR"/>
+                                    <constraint firstItem="meA-ic-2Sv" firstAttribute="width" secondItem="7We-L5-9cR" secondAttribute="width" id="sM8-Cn-rek"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="Jfi-A6-jlX"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="7We-L5-9cR"/>
+                            </scrollView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="qPa-mo-m9g" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="AGM-F3-QAj"/>
+                            <constraint firstAttribute="bottom" secondItem="qPa-mo-m9g" secondAttribute="bottom" id="grB-Rg-bdv"/>
+                            <constraint firstItem="qPa-mo-m9g" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="mVT-jZ-HOO"/>
+                            <constraint firstItem="qPa-mo-m9g" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="wFO-F6-Lnq"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="28.985507246376812" y="69.642857142857139"/>
         </scene>
     </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
